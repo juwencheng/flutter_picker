@@ -368,6 +368,10 @@ class PickerWidgetState<T> extends State<_PickerWidget> {
         children: _buildViews(),
       ),
     ));
+    _body.add(Container(
+      color: Colors.white,
+      height: MediaQuery.of(context).padding.bottom,
+    ));
 
     if (picker.footer != null)
       _body.add(picker.footer);
