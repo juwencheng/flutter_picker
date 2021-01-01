@@ -368,13 +368,13 @@ class PickerWidgetState<T> extends State<_PickerWidget> {
         children: _buildViews(),
       ),
     ));
+
+    if (picker.footer != null)
+      _body.add(picker.footer);
     _body.add(Container(
       color: Colors.white,
       height: MediaQuery.of(context).padding.bottom,
     ));
-
-    if (picker.footer != null)
-      _body.add(picker.footer);
     Widget v = Column(
       mainAxisSize: MainAxisSize.min,
       children: _body,
